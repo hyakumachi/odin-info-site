@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daigo Umehara</title>
+    <link
+      rel="icon"
+      href="https://i.namu.wiki/i/erunF8_F8vSYuYw_d6ouoDnFtFhUf-IT7p4RaKCTzKtC3t8mg4SIoASXGHl133jMuPhDmMingkl762g1WuGlOKfa3RTSrHwWfBhpJiHG8PBYHmWwW0ryYgAZ9FczFGlr1sjOfsCNr4RH_YUecVS1Dg.webp"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
+    <!-- Nav -->
+    <nav
+      class="border-b border-zinc-800 px-8 py-5 flex items-center justify-center gap-8 font-bold text-lg"
+    >
+      <a href="/" class="text-zinc-100">Home</a>
+      <a href="/about" class="hover:text-red-500 transition-colors">About</a>
+      <a href="/contact-me" class="hover:text-red-500 transition-colors"
+        >Contact</a
+      >
+    </nav>
+
+    <!-- Hero -->
+    <main class="flex-1 max-w-3xl mx-auto w-full px-8">
+      <section class="pt-24 pb-16">
+        <p class="text-red-600 text-xs tracking-widest uppercase mb-5">
+          The Beast &mdash; Pro Fighting Game Player
+        </p>
+        <h1 class="text-7xl font-bold leading-none mb-6">
+          Daigo<br />
+          <span class="text-zinc-500">Umehara</span>
+        </h1>
+        <p class="text-zinc-400 text-lg max-w-lg leading-relaxed">
+          Japan's most celebrated fighting game competitor. Known for legendary
+          precision, nerves of steel, and over two decades at the top level.
+        </p>
+      </section>
+
+      <!-- Stats -->
+      <section class="border-t border-zinc-800 pt-14 pb-16">
+        <p class="text-xs tracking-widest uppercase text-red-600 mb-8">
+          By the numbers
+        </p>
+        <div class="grid grid-cols-3 gap-px bg-zinc-800">
+          <div class="bg-zinc-950 p-8">
+            <p class="text-5xl font-bold">2004</p>
+            <p class="text-zinc-500 text-sm mt-2">Year of EVO Moment #37</p>
+          </div>
+          <div class="bg-zinc-950 p-8">
+            <p class="text-5xl font-bold">
+              20<span class="text-red-600">+</span>
+            </p>
+            <p class="text-zinc-500 text-sm mt-2">Years competing</p>
+          </div>
+          <div class="bg-zinc-950 p-8">
+            <p class="text-5xl font-bold">#1</p>
+            <p class="text-zinc-500 text-sm mt-2">All-time icon</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+      <section class="border-t border-zinc-800 pt-14 pb-16">
+        <p class="text-xs tracking-widest uppercase text-red-600 mb-2">
+          Must watch
+        </p>
+        <p class="text-zinc-500 text-sm mb-8">The legend himself in action</p>
+        <div class="w-full aspect-video border border-zinc-800 relative">
+          <div
+            id="yt-thumb"
+            class="absolute inset-0 cursor-pointer group"
+            onclick="loadVideo()"
+          >
+            <img
+              src="https://img.youtube.com/vi/sc7QEz-Dv2A/maxresdefault.jpg"
+              class="w-full h-full object-cover"
+              alt="Video thumbnail"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="bg-red-600 group-hover:bg-red-500 transition-colors w-16 h-16 flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                  class="w-7 h-7 ml-1"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          function loadVideo() {
+            var thumb = document.getElementById("yt-thumb");
+            var iframe = document.createElement("iframe");
+            iframe.src = "https://www.youtube.com/embed/sc7QEz-Dv2A?autoplay=1";
+            iframe.className = "absolute inset-0 w-full h-full";
+            iframe.setAttribute(
+              "allow",
+              "autoplay; encrypted-media; fullscreen",
+            );
+            iframe.allowFullscreen = true;
+            thumb.replaceWith(iframe);
+          }
+        </script>
+      </section>
+
+      <!-- Quote -->
+      <section class="border-t border-zinc-800 pt-14 pb-20">
+        <blockquote class="border-l-2 border-red-600 pl-6">
+          <p class="text-zinc-300 text-xl leading-relaxed italic">
+            "I don't play to win. I play to get better."
+          </p>
+          <footer class="text-zinc-600 text-sm mt-3">
+            &mdash; Daigo Umehara
+          </footer>
+        </blockquote>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-zinc-800 px-8 py-5 text-center text-zinc-600 text-xs"
+    >
+      Fan-made info site &mdash; Not affiliated with Daigo Umehara
+    </footer>
+  </body>
+</html>
